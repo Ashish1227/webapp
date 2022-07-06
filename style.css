@@ -126,13 +126,15 @@ body
     border: 1px solid #eee;
     border-radius: 10px;
     padding: 15px;
+    background: rgba(0,0,0,0.2);
+
 }
 
 .weather-forecast .weather-forecast-item .day
 {
     padding: 5px 15px;
     background: #3c3c44;
-    border-radius: 5px;
+    border-radius: 50px;
     text-align: center;
 
 }
@@ -140,14 +142,62 @@ body
 .weather-forecast .weather-forecast-item .temp
 {
     font-weight: 100;
+    font-size: 12px;
 }
 
 @media only screen and (max-width: 730px)
 {
+    .container{
+        padding: 20px;
+    }
+
     .future-forecast
     {
         justify-content: start;
         align-items: none;
         overflow-y: scroll;
     }
+
+    .future-forecast .today .temp{
+        font-size: 23px;
+    }
+
+    .date-container .time{
+        font-size: 50px;
+    }
+
+    .date-container #am-pm{
+        font-size: 20px;
+    }
+
+    .date-container .date{
+        font-size: 20px;
+    }
+
+    .place-container{
+        text-align: end;
+        margin-top: 15px;
+    }
+
+    .place-container .time-zone{
+        font-size: 20px;
+    }
+
+    .current-info .others{
+        padding: 12px;
+    }
+
+    .current-info .others .weather-item{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 1000px)
+{
+    .future-forecast
+    {
+        justify-content: start;
+        align-items: none;
+        overflow-x: scroll;
+    }    
 }
